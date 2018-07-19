@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Your APP</title>
+		<title>iframe</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -15,8 +15,8 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 
 
-		<script>
-			(function(apiKey){
+		<script>	
+  (function(apiKey){
     (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
       v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
       o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
@@ -27,7 +27,7 @@
     // Please use Strings, Numbers, or Bools for value types.
     pendo.initialize({
       visitor: {
-       id:              2   // Required if user is logged in
+        id:              '1'   // Required if user is logged in
         // email:        // Optional
         // role:         // Optional
 
@@ -36,7 +36,7 @@
       },
 
       account: {
-        // id:           100 // Highly recommended
+        id:           '1' // Highly recommended
         // name:         // Optional
         // planLevel:    // Optional
         // planPrice:    // Optional
@@ -47,7 +47,7 @@
       }
     });
   })('77500457-1832-4463-4a11-08d199720142');
- </script>		
+ </script>	
 
 
 	</head>

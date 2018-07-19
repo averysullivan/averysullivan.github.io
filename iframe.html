@@ -13,38 +13,39 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<script>
 
-  (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
-  v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
-  o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
-  y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/77500457-1832-4463-4a11-08d199720142/pendo.js';
-  z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+ <script>		
+  (function(apiKey){
+    (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
+      v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
+      o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+      y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
+      z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
 
-  // Call this whenever information about your visitors becomes available
-  // Please use Strings, Numbers, or Bools for value types.
-  pendo.initialize({
-    apiKey: '77500457-1832-4463-4a11-08d199720142',
-	  
-    visitor: {
-      id:1,//window.prompt("enter visitor ID", "Your ID"),//Math.round(Math.random()*10)  // Required if user is logged in
-      moveField:"string"
-	    // email:        // Optional
-      
-      // You can add any additional visitor level key-values here,
-      // as long as it's not one of the above reserved names.
-    },
-    account: {
-      id:1,  // Highly recommended
-      moveField:"string",
-      accountfield:"string"
-      // planLevel:    // Optional
-      // planPrice:    // Optional
-      // creationDate: // Optional
-      // You can add any additional account level key-values here,
-      // as long as it's not one of the above reserved names.
-    }
-  });
+    // Call this whenever information about your visitors becomes available
+    // Please use Strings, Numbers, or Bools for value types.
+    pendo.initialize({
+      visitor: {
+        id:              '1'   // Required if user is logged in
+        // email:        // Optional
+        // role:         // Optional
+
+        // You can add any additional visitor level key-values here,
+        // as long as it's not one of the above reserved names.
+      },
+
+      account: {
+        id:           '1' // Highly recommended
+        // name:         // Optional
+        // planLevel:    // Optional
+        // planPrice:    // Optional
+        // creationDate: // Optional
+
+        // You can add any additional account level key-values here,
+        // as long as it's not one of the above reserved names.
+      }
+    });
+  })('77500457-1832-4463-4a11-08d199720142');
  </script>
 	</head>
 	<body>
